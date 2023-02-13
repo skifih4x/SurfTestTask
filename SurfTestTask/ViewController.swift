@@ -30,14 +30,14 @@ final class ViewController: UIViewController {
         view.addSubview(internshipView)
         
         NSLayoutConstraint.activate([
-            mainImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -208),
+            mainImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -225),
             mainImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             mainImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             mainImage.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             internshipView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             internshipView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            internshipView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            internshipView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             internshipView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.38)
         ])
     }

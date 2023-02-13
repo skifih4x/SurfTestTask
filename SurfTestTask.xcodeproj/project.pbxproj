@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0083F4D8299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0083F4C6299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf */; };
-		0083F4DC299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0083F4CA299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf */; };
-		0083F4E1299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0083F4CF299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf */; };
+		005A8874299A9AF200AF6D93 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 005A8873299A9AF200AF6D93 /* SF-Pro-Display-Bold.otf */; };
+		005A8876299A9AFC00AF6D93 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 005A8875299A9AFC00AF6D93 /* SF-Pro-Display-Medium.otf */; };
+		005A8878299A9B0400AF6D93 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 005A8877299A9B0400AF6D93 /* SF-Pro-Display-Regular.otf */; };
+		005A887A299AA87E00AF6D93 /* SwiftSkillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A8879299AA87E00AF6D93 /* SwiftSkillModel.swift */; };
+		005A887C299AAF0200AF6D93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C5D168299A539000172C96 /* Assets.xcassets */; };
+		005A887E299AAF1D00AF6D93 /* SkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A887D299AAF1D00AF6D93 /* SkillCell.swift */; };
 		00B95878299A80C100942C84 /* InternshipSurfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B95877299A80C100942C84 /* InternshipSurfView.swift */; };
 		00C5D160299A538F00172C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C5D15F299A538F00172C96 /* AppDelegate.swift */; };
 		00C5D162299A538F00172C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C5D161299A538F00172C96 /* SceneDelegate.swift */; };
 		00C5D164299A538F00172C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C5D163299A538F00172C96 /* ViewController.swift */; };
-		00C5D169299A539000172C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C5D168299A539000172C96 /* Assets.xcassets */; };
 		00C5D16C299A539000172C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C5D16A299A539000172C96 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0083F4C6299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.ttf"; sourceTree = "<group>"; };
-		0083F4CA299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.ttf"; sourceTree = "<group>"; };
-		0083F4CF299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.ttf"; sourceTree = "<group>"; };
+		005A8873299A9AF200AF6D93 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		005A8875299A9AFC00AF6D93 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		005A8877299A9B0400AF6D93 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		005A8879299AA87E00AF6D93 /* SwiftSkillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSkillModel.swift; sourceTree = "<group>"; };
+		005A887D299AAF1D00AF6D93 /* SkillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCell.swift; sourceTree = "<group>"; };
 		00B95877299A80C100942C84 /* InternshipSurfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipSurfView.swift; sourceTree = "<group>"; };
 		00C5D15C299A538F00172C96 /* SurfTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C5D15F299A538F00172C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,9 +50,9 @@
 		0083F4BE299A8CD9000E7AE8 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				0083F4CA299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf */,
-				0083F4C6299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf */,
-				0083F4CF299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf */,
+				005A8873299A9AF200AF6D93 /* SF-Pro-Display-Bold.otf */,
+				005A8875299A9AFC00AF6D93 /* SF-Pro-Display-Medium.otf */,
+				005A8877299A9B0400AF6D93 /* SF-Pro-Display-Regular.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -72,7 +76,6 @@
 		00C5D15E299A538F00172C96 /* SurfTestTask */ = {
 			isa = PBXGroup;
 			children = (
-				0083F4BE299A8CD9000E7AE8 /* Font */,
 				00C5D15F299A538F00172C96 /* AppDelegate.swift */,
 				00C5D161299A538F00172C96 /* SceneDelegate.swift */,
 				00C5D163299A538F00172C96 /* ViewController.swift */,
@@ -80,6 +83,9 @@
 				00C5D16A299A539000172C96 /* LaunchScreen.storyboard */,
 				00C5D16D299A539000172C96 /* Info.plist */,
 				00B95877299A80C100942C84 /* InternshipSurfView.swift */,
+				005A887D299AAF1D00AF6D93 /* SkillCell.swift */,
+				0083F4BE299A8CD9000E7AE8 /* Font */,
+				005A8879299AA87E00AF6D93 /* SwiftSkillModel.swift */,
 			);
 			path = SurfTestTask;
 			sourceTree = "<group>";
@@ -143,10 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C5D16C299A539000172C96 /* LaunchScreen.storyboard in Resources */,
-				00C5D169299A539000172C96 /* Assets.xcassets in Resources */,
-				0083F4E1299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf in Resources */,
-				0083F4D8299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf in Resources */,
-				0083F4DC299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf in Resources */,
+				005A8878299A9B0400AF6D93 /* SF-Pro-Display-Regular.otf in Resources */,
+				005A8874299A9AF200AF6D93 /* SF-Pro-Display-Bold.otf in Resources */,
+				005A8876299A9AFC00AF6D93 /* SF-Pro-Display-Medium.otf in Resources */,
+				005A887C299AAF0200AF6D93 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,8 +164,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C5D164299A538F00172C96 /* ViewController.swift in Sources */,
+				005A887E299AAF1D00AF6D93 /* SkillCell.swift in Sources */,
 				00C5D160299A538F00172C96 /* AppDelegate.swift in Sources */,
 				00B95878299A80C100942C84 /* InternshipSurfView.swift in Sources */,
+				005A887A299AA87E00AF6D93 /* SwiftSkillModel.swift in Sources */,
 				00C5D162299A538F00172C96 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
