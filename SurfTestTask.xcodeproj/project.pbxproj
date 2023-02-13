@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0083F4D8299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0083F4C6299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf */; };
+		0083F4DC299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0083F4CA299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf */; };
+		0083F4E1299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0083F4CF299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf */; };
+		00B95878299A80C100942C84 /* InternshipSurfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B95877299A80C100942C84 /* InternshipSurfView.swift */; };
 		00C5D160299A538F00172C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C5D15F299A538F00172C96 /* AppDelegate.swift */; };
 		00C5D162299A538F00172C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C5D161299A538F00172C96 /* SceneDelegate.swift */; };
 		00C5D164299A538F00172C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C5D163299A538F00172C96 /* ViewController.swift */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0083F4C6299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.ttf"; sourceTree = "<group>"; };
+		0083F4CA299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.ttf"; sourceTree = "<group>"; };
+		0083F4CF299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.ttf"; sourceTree = "<group>"; };
+		00B95877299A80C100942C84 /* InternshipSurfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipSurfView.swift; sourceTree = "<group>"; };
 		00C5D15C299A538F00172C96 /* SurfTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C5D15F299A538F00172C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00C5D161299A538F00172C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0083F4BE299A8CD9000E7AE8 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				0083F4CA299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf */,
+				0083F4C6299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf */,
+				0083F4CF299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		00C5D153299A538F00172C96 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +72,14 @@
 		00C5D15E299A538F00172C96 /* SurfTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				0083F4BE299A8CD9000E7AE8 /* Font */,
 				00C5D15F299A538F00172C96 /* AppDelegate.swift */,
 				00C5D161299A538F00172C96 /* SceneDelegate.swift */,
 				00C5D163299A538F00172C96 /* ViewController.swift */,
 				00C5D168299A539000172C96 /* Assets.xcassets */,
 				00C5D16A299A539000172C96 /* LaunchScreen.storyboard */,
 				00C5D16D299A539000172C96 /* Info.plist */,
+				00B95877299A80C100942C84 /* InternshipSurfView.swift */,
 			);
 			path = SurfTestTask;
 			sourceTree = "<group>";
@@ -124,6 +144,9 @@
 			files = (
 				00C5D16C299A539000172C96 /* LaunchScreen.storyboard in Resources */,
 				00C5D169299A539000172C96 /* Assets.xcassets in Resources */,
+				0083F4E1299A8CF9000E7AE8 /* SF-Pro-Display-Regular.ttf in Resources */,
+				0083F4D8299A8CF9000E7AE8 /* SF-Pro-Display-Medium.ttf in Resources */,
+				0083F4DC299A8CF9000E7AE8 /* SF-Pro-Display-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +159,7 @@
 			files = (
 				00C5D164299A538F00172C96 /* ViewController.swift in Sources */,
 				00C5D160299A538F00172C96 /* AppDelegate.swift in Sources */,
+				00B95878299A80C100942C84 /* InternshipSurfView.swift in Sources */,
 				00C5D162299A538F00172C96 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
