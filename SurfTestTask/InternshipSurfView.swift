@@ -12,6 +12,8 @@ final class InternshipSurfView: UIView {
     
     var skillModel = SwiftSkillModel()
     
+    // MARK: - UI Elements
+    
     lazy var mainStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -23,7 +25,7 @@ final class InternshipSurfView: UIView {
     
     lazy var nameIntershipLabel: UILabel = {
         var label = UILabel()
-        label.font = UIFont(name: "SF-Pro-Display-Bold", size: 24)
+        label.font = .boldSystemFont(ofSize: 24)
         label.text = "Стажировка в Surf"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -54,8 +56,6 @@ final class InternshipSurfView: UIView {
     lazy var inviteStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
-        //        stack.contentMode = .center
-        //        stack.backgroundColor = .red
         stack.alignment = .center
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
@@ -79,18 +79,23 @@ final class InternshipSurfView: UIView {
         return button
     }()
     
-    @objc func add1() {
+    @objc func add1(sender: UIButton) {
         alert()
+        sender.isSelected = !sender.isSelected
     }
+    
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
         layer.cornerRadius = 30
         layout()
+        
     }
     
     private func layout() {
+        skillCollectionView.allowsMultipleSelection = true
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(nameIntershipLabel)
         mainStackView.addArrangedSubview(descriptionIntershipLabel)
@@ -113,7 +118,7 @@ final class InternshipSurfView: UIView {
             submitApplicationButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.57),
             submitApplicationButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.17),
             
-            inviteStackView.topAnchor.constraint(equalTo: skillCollectionView.bottomAnchor, constant: 32),
+            inviteStackView.topAnchor.constraint(equalTo: skillCollectionView.bottomAnchor),
             inviteStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             inviteStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             inviteStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
@@ -124,6 +129,8 @@ final class InternshipSurfView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 
 extension InternshipSurfView:  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -136,7 +143,6 @@ extension InternshipSurfView:  UICollectionViewDelegate, UICollectionViewDataSou
         if index > skillModel.skills.count - 1 {
             index -= skillModel.skills.count
         }
-        
         let ab = skillModel.skills[index % skillModel.skills.count]
         cell.nameSkillLabel.text = ab
         return cell
@@ -147,8 +153,6 @@ extension InternshipSurfView:  UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        
         var offset = collectionView.contentOffset
         let width = collectionView.contentSize.width
         if offset.x < width/4 {
@@ -160,6 +164,8 @@ extension InternshipSurfView:  UICollectionViewDelegate, UICollectionViewDataSou
         }
     }
 }
+
+// MARK: - UIAlertController
 
 extension InternshipSurfView {
     
