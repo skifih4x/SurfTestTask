@@ -47,6 +47,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0039C7D1299BCBF90035EBAB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				00C5D15F299A538F00172C96 /* AppDelegate.swift */,
+				00C5D161299A538F00172C96 /* SceneDelegate.swift */,
+				00C5D16D299A539000172C96 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0039C7D2299BCC190035EBAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				005A8879299AA87E00AF6D93 /* SwiftSkillModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0039C7D3299BCC230035EBAB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00C5D163299A538F00172C96 /* MainViewController.swift */,
+				0039C7D5299BCC330035EBAB /* View */,
+				0039C7D4299BCC2C0035EBAB /* Cell */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0039C7D4299BCC2C0035EBAB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				005A887D299AAF1D00AF6D93 /* SkillCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0039C7D5299BCC330035EBAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00B95877299A80C100942C84 /* InternshipSurfView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0039C7D6299BCC3A0035EBAB /* Resurces */ = {
+			isa = PBXGroup;
+			children = (
+				0083F4BE299A8CD9000E7AE8 /* Font */,
+				00C5D168299A539000172C96 /* Assets.xcassets */,
+				00C5D16A299A539000172C96 /* LaunchScreen.storyboard */,
+			);
+			path = Resurces;
+			sourceTree = "<group>";
+		};
 		0083F4BE299A8CD9000E7AE8 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,16 +130,10 @@
 		00C5D15E299A538F00172C96 /* SurfTestTask */ = {
 			isa = PBXGroup;
 			children = (
-				00C5D15F299A538F00172C96 /* AppDelegate.swift */,
-				00C5D161299A538F00172C96 /* SceneDelegate.swift */,
-				00C5D163299A538F00172C96 /* MainViewController.swift */,
-				00C5D168299A539000172C96 /* Assets.xcassets */,
-				00C5D16A299A539000172C96 /* LaunchScreen.storyboard */,
-				00C5D16D299A539000172C96 /* Info.plist */,
-				00B95877299A80C100942C84 /* InternshipSurfView.swift */,
-				005A887D299AAF1D00AF6D93 /* SkillCell.swift */,
-				0083F4BE299A8CD9000E7AE8 /* Font */,
-				005A8879299AA87E00AF6D93 /* SwiftSkillModel.swift */,
+				0039C7D3299BCC230035EBAB /* Controllers */,
+				0039C7D2299BCC190035EBAB /* Model */,
+				0039C7D6299BCC3A0035EBAB /* Resurces */,
+				0039C7D1299BCBF90035EBAB /* App */,
 			);
 			path = SurfTestTask;
 			sourceTree = "<group>";
@@ -309,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W9FSXFWG34;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SurfTestTask/Info.plist;
+				INFOPLIST_FILE = SurfTestTask/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -336,7 +384,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W9FSXFWG34;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SurfTestTask/Info.plist;
+				INFOPLIST_FILE = SurfTestTask/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

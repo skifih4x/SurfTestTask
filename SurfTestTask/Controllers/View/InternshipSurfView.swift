@@ -9,12 +9,13 @@ import UIKit
 
 final class InternshipSurfView: UIView {
     
+    // MARK: - Model
     
     var skillModel = SwiftSkillModel()
     
     // MARK: - UI Elements
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 10
@@ -23,7 +24,7 @@ final class InternshipSurfView: UIView {
         return stack
     }()
     
-    lazy var nameIntershipLabel: UILabel = {
+    private lazy var nameIntershipLabel: UILabel = {
         var label = UILabel()
         label.font = .boldSystemFont(ofSize: 24)
         label.text = "Стажировка в Surf"
@@ -31,7 +32,7 @@ final class InternshipSurfView: UIView {
         return label
     }()
     
-    lazy var descriptionIntershipLabel: UILabel = {
+    private lazy var descriptionIntershipLabel: UILabel = {
         var label = UILabel()
         label.text = "Работай над реальными задачами под руководством опытного наставника и получи возможность стать частью команды мечты."
         label.font = .systemFont(ofSize: 14)
@@ -41,7 +42,7 @@ final class InternshipSurfView: UIView {
         return label
     }()
     
-    lazy var skillCollectionView: UICollectionView = {
+    private lazy var skillCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -53,7 +54,7 @@ final class InternshipSurfView: UIView {
         return collection
     }()
     
-    lazy var inviteStackView: UIStackView = {
+    private lazy var inviteStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.alignment = .center
@@ -61,7 +62,7 @@ final class InternshipSurfView: UIView {
         return stack
     }()
     
-    lazy var invitationIntershipLabel: UILabel = {
+    private lazy var invitationIntershipLabel: UILabel = {
         var label = UILabel()
         label.text = "Хочешь к нам?"
         label.font = .systemFont(ofSize: 14)
@@ -69,7 +70,7 @@ final class InternshipSurfView: UIView {
         return label
     }()
     
-    lazy var submitApplicationButton: UIButton = {
+    private lazy var submitApplicationButton: UIButton = {
         let button = UIButton()
         button.setTitle("Отправить заявку", for: .normal)
         button.backgroundColor = .black
@@ -81,20 +82,29 @@ final class InternshipSurfView: UIView {
     
     @objc func add1(sender: UIButton) {
         alert()
-        sender.isSelected = !sender.isSelected
     }
     
     // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
+        layout()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setup() {
         backgroundColor = .white
         layer.cornerRadius = 30
-        layout()
-        
     }
     
     private func layout() {
+        
         skillCollectionView.allowsMultipleSelection = true
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(nameIntershipLabel)
@@ -125,14 +135,14 @@ final class InternshipSurfView: UIView {
         ])
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 }
 
-// MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 
 extension InternshipSurfView:  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    // MARK: - UICollectionViewDataSource
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         skillModel.skills.count * 2
     }
@@ -148,9 +158,13 @@ extension InternshipSurfView:  UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
+    // MARK: - UICollectionViewDelegateFlowLayout
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: skillModel.skills[indexPath.item % skillModel.skills.count].size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)]).width + 25,  height: 44)
     }
+    
+    // MARK: - UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         var offset = collectionView.contentOffset
@@ -166,7 +180,7 @@ extension InternshipSurfView:  UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let indexPath = IndexPath(item: 10, section: 0)
-        self.skillCollectionView.scrollToItem(at: indexPath, at: [.centeredVertically, .centeredHorizontally], animated: true)
+        skillCollectionView.scrollToItem(at: indexPath, at: [.centeredVertically, .centeredHorizontally], animated: true)
     }
 }
 

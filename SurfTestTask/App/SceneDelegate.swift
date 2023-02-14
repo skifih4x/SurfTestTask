@@ -16,8 +16,6 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowsScene)
         window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
-        
-        
     }
 }
 

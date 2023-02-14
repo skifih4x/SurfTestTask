@@ -9,7 +9,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    let scrollView = UIScrollView()
+    // MARK: - UI Element
     
     private let mainImage: UIImageView = {
         let image = UIImageView()
@@ -26,8 +26,16 @@ final class MainViewController: UIViewController {
         return view
     }()
     
+    // MARK: - Life Cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        layout()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func layout() {
         view.addSubview(mainImage)
         view.addSubview(internshipView)
         
@@ -42,28 +50,5 @@ final class MainViewController: UIViewController {
             internshipView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             internshipView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.38)
         ])
-    }
-}
-
-import SwiftUI
-
-struct PeopleVCProvider: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-            .previewDevice("iPhone 13 Pro Max")
-    }
-    
-    struct Container: UIViewControllerRepresentable {
-        
-        let tabBarVC = MainViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            tabBarVC
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
-        
     }
 }
