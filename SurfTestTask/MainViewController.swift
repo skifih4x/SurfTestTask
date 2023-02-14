@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  SurfTestTask
 //
 //  Created by Артем Орлов on 13.02.2023.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class MainViewController: UIViewController {
+    
+    let scrollView = UIScrollView()
     
     private let mainImage: UIImageView = {
         let image = UIImageView()
@@ -53,7 +55,7 @@ struct PeopleVCProvider: PreviewProvider {
     
     struct Container: UIViewControllerRepresentable {
         
-        let tabBarVC = ViewController()
+        let tabBarVC = MainViewController()
         
         func makeUIViewController(context: Context) -> some UIViewController {
             tabBarVC
