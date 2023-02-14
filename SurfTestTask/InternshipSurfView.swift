@@ -163,6 +163,11 @@ extension InternshipSurfView:  UICollectionViewDelegate, UICollectionViewDataSou
             collectionView.setContentOffset(offset, animated: false)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let indexPath = IndexPath(item: 10, section: 0)
+        self.skillCollectionView.scrollToItem(at: indexPath, at: [.centeredVertically, .centeredHorizontally], animated: true)
+    }
 }
 
 // MARK: - UIAlertController
