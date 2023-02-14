@@ -37,7 +37,7 @@ final class InternshipSurfView: UIView {
         label.text = "Работай над реальными задачами под руководством опытного наставника и получи возможность стать частью команды мечты."
         label.font = .systemFont(ofSize: 14)
         label.numberOfLines = 0
-        label.textColor = .gray
+        label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -66,6 +66,7 @@ final class InternshipSurfView: UIView {
         var label = UILabel()
         label.text = "Хочешь к нам?"
         label.font = .systemFont(ofSize: 14)
+        label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

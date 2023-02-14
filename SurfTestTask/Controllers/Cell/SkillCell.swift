@@ -15,7 +15,6 @@ final class SkillCell: UICollectionViewCell {
     
     lazy var nameSkillLabel: UILabel = {
         var label = UILabel()
-        label.text = "123"
         label.textColor = .black
         label.textAlignment = .center
         label.clipsToBounds = true
@@ -26,9 +25,8 @@ final class SkillCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .lightGray
         addSubview(nameSkillLabel)
-        
+        backgroundColor = .lightGray
     }
     
     required init?(coder: NSCoder) {
@@ -37,9 +35,7 @@ final class SkillCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        nameSkillLabel.frame = contentView.bounds
-        layer.cornerRadius = 10
-        selectedBackgroundView?.layer.cornerRadius = 10
+        setup()
     }
     
     override var isSelected: Bool {
@@ -47,5 +43,14 @@ final class SkillCell: UICollectionViewCell {
             backgroundColor = isSelected ? .black : .lightGray
             nameSkillLabel.textColor = isSelected ? .white : .black
         }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setup() {
+        nameSkillLabel.frame = contentView.bounds
+        layer.cornerRadius = 10
+        
+        selectedBackgroundView?.layer.cornerRadius = 10
     }
 }
